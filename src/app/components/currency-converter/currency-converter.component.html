@@ -1,0 +1,12 @@
+<app-header></app-header>
+<app-form
+  [currency]="allCurrency$ | async"
+  [firstValue]="firstValue$ | async"
+  [secondValue]="secondValue$ | async"
+  (outFirstValue)="getFirstValue($event)"
+  (outSecondValue)="getSecondValue($event)"
+  (outFirstCurrency)="getFirstCurrency($event)"
+  (outSecondCurrency)="getSecondCurrency($event)"
+>
+</app-form>
+

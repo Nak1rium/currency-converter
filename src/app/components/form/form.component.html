@@ -1,0 +1,23 @@
+<div *ngIf="currency" class="mainFormContainer">
+  <form [formGroup]="form">
+    <div class="formContainer">
+      <label>
+        <p-inputNumber mode="decimal" (onInput)="getFirstValue($event.value)" [minFractionDigits]="2"
+                       [maxFractionDigits]="2" formControlName="firstValue">
+        </p-inputNumber>
+      </label>
+      <p-dropdown [options]="currency" [styleClass]="'dropdown'" formControlName="firstCurrency"></p-dropdown>
+    </div>
+    <div class="formContainer">
+      <label>
+        <p-inputNumber mode="decimal" (onInput)="getSecondValue($event.value)" [minFractionDigits]="2"
+                       [maxFractionDigits]="2" formControlName="secondValue">
+        </p-inputNumber>
+      </label>
+      <p-dropdown [options]="currency" [styleClass]="'dropdown'" formControlName="secondCurrency"></p-dropdown>
+    </div>
+  </form>
+</div>
+
+
+
